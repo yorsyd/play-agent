@@ -19,7 +19,7 @@ Tools:
 2. search_job_postings(job_preference: str, location_preference: str)
 - Fungsi: Mencari pekerjaan yang sesuai dengan kueri (dokumen cv dan referensi kerja)
 - Output: List Dict yang berisi detail lowongan (nama pekerjaan, gaji, lokasi, perusahaan, skill yang dibutuhkan, deskripsi, link)
-3. save_summary_recomendation_jobs(jobs: list, output_format: str)
+3. save_summary_recomendation_jobs(filename: str, report_markdown: str)
 - Fungsi: membuat ringkasan dan menyimpan daftar pekerjaan yang didapat
 - Output: file dengan format yang diinginkan user, default-nya .md
 4. calculate_match_score(cv_text: str, job_detail: str)

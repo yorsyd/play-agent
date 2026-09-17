@@ -1,12 +1,12 @@
 import unittest
-import search_job_postings
+import job_researcher
 
 class TestSearchJobPostings(unittest.TestCase):
     def test_search_job_postings_valid(self):
         # Test with valid job and location preferences
         job_preference = "Software Engineer"
         location_preference = "San Francisco, CA"
-        result = search_job_postings.search_job_postings(job_preference, location_preference)
+        result = job_researcher.search_job_postings(job_preference, location_preference)
         
         self.assertIsInstance(result, dict)
         if len(result["jobs_results"]) > 0:
@@ -22,7 +22,7 @@ class TestSearchJobPostings(unittest.TestCase):
         # Test with empty job and location preferences
         job_preference = ""
         location_preference = ""
-        result = search_job_postings.search_job_postings(job_preference, location_preference)
+        result = job_researcher.search_job_postings(job_preference, location_preference)
         
         self.assertIsInstance(result, str)
         self.assertTrue(result.startswith("An error occurred while searching for job postings:"))
